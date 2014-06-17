@@ -1,0 +1,13 @@
+<template name="Home">
+  <h1>Suraiya's Kitchen</h1>
+  <p>The homepage</p>
+  <ul>
+    {{#each products}}
+      {{>product}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="product">
+  {{name}}
+</template>
