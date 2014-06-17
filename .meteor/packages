@@ -6,3 +6,6 @@
 standard-app-packages
 iron-router
 insecure
+email
+http
+mandrill

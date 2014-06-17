@@ -2,13 +2,19 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "iron-router": {}
+      "iron-router": {},
+      "mandrill": {}
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
         "tag": "v0.7.1",
         "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
+      },
+      "mandrill": {
+        "git": "https://github.com/timmyg/meteor-mandrill.git",
+        "tag": "v0.0.6",
+        "commit": "211be350989440403f8171031a97dd80b6c924ec"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
