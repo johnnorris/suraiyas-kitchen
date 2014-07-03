@@ -8,6 +8,6 @@ Router.configure({
 
 Router.map(function () {
   this.route('home', {
-    path: '/index.html'
+    path: '/'
   });
 });
