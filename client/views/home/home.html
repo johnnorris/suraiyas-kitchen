@@ -1,7 +1,13 @@
 <template name="Home">
-  <h1>Suraiya's Kitchen</h1>
+  <h1>
+    <img src="/img/logo.png" alt="Suraiya's Kitchen">
+  </h1>
+
   <p>The homepage</p>
-  <ul>
+
+  <h2>Our products</h2>
+
+  <ul class="products">
     {{#each products}}
       {{>Product}}
     {{/each}}
@@ -11,12 +17,22 @@
 </template>
 
 <template name="Product">
-  {{name}}
+  <li>
+    <img src="/imgs/products/{{slug}}.jpg">
+    <h3>{{name}}</h3>
+    <p>{{description}}</p>
+    <p class="price">from £{{price}}</p>
+  </li>
 </template>
 
-
 <template name="EnquiryForm">
-  <form id="enquiry_form">
+  <form class="enquiry_form">
+    <label for="">From:</label>
+    <input type="text" name="from">
+    
+    <label for="">Message:</label>
+    <textarea name="message" id="" cols="30" rows="10"></textarea>
+    
     <button>send</button>
   </form>
 </template>

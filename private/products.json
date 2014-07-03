@@ -2,16 +2,16 @@
 	{
 		"name": "Giant cupcake",
 		"description": "A lovely giant cupcake",
-		"price": 50.00
+		"price": 50
 	},
 	{
 		"name": "Dozen cupcakes",
 		"description": "12 identical cupcakes",
-		"price": 20.00
+		"price": 20
 	},
 	{
 		"name": "2 dozen cupcakes",
 		"description": "24 identical cupcakes",
-		"price": 38.00
+		"price": 38
 	}
 ]
