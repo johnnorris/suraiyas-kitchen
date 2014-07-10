@@ -3,7 +3,9 @@
   "dependencies": {
     "basePackages": {
       "iron-router": {},
-      "mandrill": {}
+      "mandrill": {},
+      "semantic-ui": {},
+      "stellar": {}
     },
     "packages": {
       "iron-router": {
@@ -15,6 +17,16 @@
         "git": "https://github.com/timmyg/meteor-mandrill.git",
         "tag": "v0.0.6",
         "commit": "211be350989440403f8171031a97dd80b6c924ec"
+      },
+      "semantic-ui": {
+        "git": "https://github.com/nooitaf/meteor-semantic-ui.git",
+        "tag": "v0.19.0",
+        "commit": "23ddf7b58db125cc33d0d95d58fcac940f262481"
+      },
+      "stellar": {
+        "git": "https://github.com/noorderstorm/meteor-stellar.git",
+        "tag": "v0.1.0",
+        "commit": "1ca2f68e0cca5967a6f88545cea12055c9fc2465"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

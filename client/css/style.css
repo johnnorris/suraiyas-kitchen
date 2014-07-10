@@ -1,24 +1,114 @@
 * {
   padding: 0;
   margin: 0;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 body {
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+body > * {
   padding: 2em;
+}
+
+header {
+  position: relative;
+
+  min-height: 480px;
+
+  text-align: center;
+  color: white;
+
+  background: #6c00b5; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #6c00b5 0%, #4d008c 40%, #34004f 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#6c00b5), color-stop(40%,#4d008c), color-stop(100%,#34004f)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #6c00b5 0%,#4d008c 40%,#34004f 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #6c00b5 0%,#4d008c 40%,#34004f 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #6c00b5 0%,#4d008c 40%,#34004f 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #6c00b5 0%,#4d008c 40%,#34004f 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c00b5', endColorstr='#34004f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.introduction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translateX(-50%) translatey(-50%);
+  -webkit-transform: translateX(-50%) translatey(-50%);
+}
+
+.introduction h2 {
+  font-size: 3em;
+}
+
+h1 img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+#arrow-down {
+  position: absolute;
+  bottom: 2em;
+  left: 50%;
+  margin-left: -2em;
+
+  width: 4em;
+  height: 4em;
+  fill: white;
+}
+
+
+.divide {
+  position: relative;
+  height: 100px;
+  background: url('/img/1.jpg') no-repeat fixed;
+  background-size: cover;
+}
+
+.divide.two {
+  /*background-image: url('/img/2.jpg');*/
   background: #eee;
 }
 
-.products li {
-  display: inline-block;
-  width: 300px;
-  margin: 0 1em 1em 0;
-  background: #ccc;
+.divide.three {
+  /*background-image: url('/img/3.jpg');*/
+  background: #eee;
+}
+
+
+section {
+  position: relative;
+}
+
+
+#products {
+}
+
+#products .item {
+  width: 256px;
+  margin-right: 1.5em;
+}
+
+#products .item .label {
+  margin-top: -3em;
+}
+
+#products button {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
 }
 
 .enquiry_form {
   display: inline-block;
   padding: 1em;
-  background: #aaa;
+  background: #eee;
 }
 
 .enquiry_form > * {

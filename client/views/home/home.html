@@ -1,27 +1,66 @@
 <template name="Home">
+  <header>{{>Header}}</header>
+
+  <div class="divide one" data-stellar-background-ratio=".5"></div>
+
+  <section id="what-i-do">{{>WhatIDo}}</section>
+
+  <div class="divide two" data-stellar-background-ratio=".5"></div>
+
+  <section id="products">{{>Products}}</section>
+
+  <div class="divide three" data-stellar-background-ratio=".5"></div>
+
+  <section id="get-in-touch">{{>EnquiryForm}}</section>
+
+</template>
+
+<template name="Header">
   <h1>
     <img src="/img/logo.png" alt="Suraiya's Kitchen">
   </h1>
 
-  <p>The homepage</p>
+  <div class="introduction">
+    <h2>I love the cake</h2>
+    <p>Let me bake your day</p>
+  </div>
 
+  <a href="#what-i-do">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="arrow-down" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve" class=" iconic-injected-svg inject-me">
+      <path id="circle" d="M0.2,27.4c-0.2-1.9-0.3-3.4,0-5.3c0.1-0.4,0.2-0.8,0.2-1.1C2.2,9.1,12.3,0.2,24.3,0c8.2-0.1,14.9,3,20.1,9.4  c3,3.8,4.6,8.2,5.3,12.9c0.1,2.5,0.1,2.5,0,4.7c-0.1,0.5-0.2,0.8-0.2,1.3C47.7,40.2,37.9,49.1,26,49.5c-10,0.3-17.5-4-22.7-12.6  C1.5,34,0.7,30.7,0.2,27.4z M2.3,24.7c-0.2,11.6,9.2,22.7,22.6,22.7c13.2,0,22.6-10.7,22.6-22.6c0-12-9.4-22.7-22.6-22.7  C11.4,2.1,2.2,13.3,2.3,24.7z"></path>
+      <path id="arrow" class="st0" d="M31.8,23.4c-0.2-0.3-0.6-0.3-0.9-0.1l-6,5l-6-5c-0.3-0.2-0.7-0.2-0.9,0.1c-0.2,0.3-0.2,0.7,0.1,0.9l6.5,5.4   c0.1,0.1,0.3,0.1,0.4,0.1c0.1,0,0.3,0,0.4-0.1l6.5-5.4C31.9,24,32,23.6,31.8,23.4z"></path>
+    </svg>
+  </a>
+</template>
+
+<template name="WhatIDo">
+  <h1>What I Do</h1>
+
+  <p></p>
+</template>
+
+<template name="Products">
   <h2>Our products</h2>
 
-  <ul class="products">
+  <ul class="ui stackable items">
     {{#each products}}
       {{>Product}}
     {{/each}}
   </ul>
-
-  {{>EnquiryForm}}
 </template>
 
 <template name="Product">
-  <li>
-    <img src="/imgs/products/{{slug}}.jpg">
-    <h3>{{name}}</h3>
-    <p>{{description}}</p>
-    <p class="price">from £{{price}}</p>
+  <li class="item">
+    <div class="image">
+      <img src="/imgs/products/{{slug}}.jpg" height="200px">
+    </div>
+    <div class="content">
+      <div class="ui ribbon label">from £{{price}}</div>
+      <h3 class="name">{{name}}</h3>
+      <p class="description">{{description}}</p>
+
+      <button class="ui circular right positive button">I want!</button>
+    </div>
   </li>
 </template>
 
@@ -33,6 +72,10 @@
     <label for="">Message:</label>
     <textarea name="message" id="" cols="30" rows="10"></textarea>
 
-    <button>send</button>
+    <div class="ui buttons">
+      <div class="ui button">Cancel</div>
+      <div class="or"></div>
+      <button type="submit" class="ui positive button">Send</button>
+    </div>
   </form>
 </template>
