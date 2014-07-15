@@ -3,7 +3,7 @@ Meteor.methods({
     var email = {
       to: "johntnorris@outlook.com",
       from: options.from,
-      subject: "CUSTOMER ENQUIRY",
+      subject: "CUSTOMER ENQUIRY - " + options.product,
       html: options.message
     };
 

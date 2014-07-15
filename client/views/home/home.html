@@ -11,7 +11,16 @@
 
   <div class="divide three" data-stellar-background-ratio=".5"></div>
 
-  <section id="get-in-touch">{{>EnquiryForm}}</section>
+  <section id="where-am-i">{{>WhereAmI}}</section>
+
+  <div class="divide four map"></div>
+
+  <footer>
+    <p>&copy; Copyright 2014 Suraiya Norris</p>
+    <p>Baked by 9ui</p>
+  </footer>
+
+  {{>EnquiryForm}}
 
 </template>
 
@@ -35,12 +44,10 @@
 
 <template name="WhatIDo">
   <h1>What I Do</h1>
-
-  <p></p>
 </template>
 
 <template name="Products">
-  <h2>Our products</h2>
+  <h2>My products</h2>
 
   <ul class="ui stackable items">
     {{#each products}}
@@ -65,17 +72,29 @@
 </template>
 
 <template name="EnquiryForm">
-  <form class="enquiry_form">
-    <label for="">From:</label>
-    <input type="text" name="from">
-
-    <label for="">Message:</label>
-    <textarea name="message" id="" cols="30" rows="10"></textarea>
-
-    <div class="ui buttons">
-      <div class="ui button">Cancel</div>
-      <div class="or"></div>
-      <button type="submit" class="ui positive button">Send</button>
+  <div class="ui contact modal">
+    <i class="close icon"></i>
+    <div class="header">
+      To: bakemyday@suraiyas.kitchen
     </div>
-  </form>
+
+    <form class="ui form segment">
+      <input type="hidden" name="product">
+      <div class="field">
+        <label for="your-email">From:</label>
+        <input id="your-email" value="donbenni@hotmail.com" placeholder="your@emailaddress.com" name="your-email" type="text">
+      </div>
+      <div class="field">
+        <label for="your-message">Message:</label>
+        <textarea name="your-message" id="your-message" cols="30" rows="10"></textarea>
+      </div>
+      <button class="ui positive button">Send</button>
+    </form>
+  </div>
+</template>
+
+<template name="WhereAmI">
+  <h1>Where Am I</h1>
+
+  <h2>Wycombe</h2>
 </template>

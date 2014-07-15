@@ -5,7 +5,8 @@
       "iron-router": {},
       "mandrill": {},
       "semantic-ui": {},
-      "stellar": {}
+      "stellar": {},
+      "googlemaps": {}
     },
     "packages": {
       "iron-router": {
@@ -27,6 +28,11 @@
         "git": "https://github.com/noorderstorm/meteor-stellar.git",
         "tag": "v0.1.0",
         "commit": "1ca2f68e0cca5967a6f88545cea12055c9fc2465"
+      },
+      "googlemaps": {
+        "git": "https://github.com/drewjw81/meteor-googlemaps.git",
+        "tag": "v0.0.2",
+        "commit": "da8785c82cfd7de0111f898ef10728e7ed24e361"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

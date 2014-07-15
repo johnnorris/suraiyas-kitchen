@@ -3,6 +3,7 @@
     "iron-router": {},
     "mandrill": {},
     "semantic-ui": {},
-    "stellar": {}
+    "stellar": {},
+    "googlemaps": {}
   }
 }

@@ -39,12 +39,20 @@ header {
   top: 50%;
   left: 50%;
 
+  width: 100%;
+
   transform: translateX(-50%) translatey(-50%);
   -webkit-transform: translateX(-50%) translatey(-50%);
 }
 
+@media only screen and (max-width: 320px) {
+  .introduction {
+    top: 57%;
+  }
+}
+
 .introduction h2 {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 h1 img {
@@ -66,7 +74,7 @@ h1 img {
 
 .divide {
   position: relative;
-  height: 100px;
+  height: 200px;
   background: url('/img/1.jpg') no-repeat fixed;
   background-size: cover;
 }
@@ -81,6 +89,11 @@ h1 img {
   background: #eee;
 }
 
+.divide.four {
+  /*background-image: url('/img/3.jpg');*/
+  background: none;
+}
+
 
 section {
   position: relative;
@@ -93,6 +106,7 @@ section {
 #products .item {
   width: 256px;
   margin-right: 1.5em;
+  cursor: default;
 }
 
 #products .item .label {
@@ -105,13 +119,36 @@ section {
   right: 1em;
 }
 
-.enquiry_form {
-  display: inline-block;
-  padding: 1em;
-  background: #eee;
+#where-am-i {
+  z-index: 1;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 
-.enquiry_form > * {
-  display: block;
-  margin: 0 0 1em;
+.modal.contact .segment {
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 580px) {
+  .modal.contact .icon {
+    top: 1rem;
+  }
+
+  .modal.contact .header {
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .modal.contact .content,
+  .modal.contact .actions {
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 345px) {
+  .modal.contact .icon {
+    top: auto;
+    bottom: 1.5rem;
+  }
 }
